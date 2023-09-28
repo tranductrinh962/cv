@@ -1,0 +1,202 @@
+/* Sử dụng font Raleway từ Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* Định dạng cơ bản cho toàn bộ trang */
+body {
+  margin: 0;
+  font-family: 'Raleway'; /* Sử dụng font Raleway */
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+/* Định dạng cho các liên kết */
+a {
+  color: #1C9C94;
+  text-decoration: none;
+}
+
+/* Đổi màu khi di chuột qua liên kết */
+a:hover {
+  opacity: 0.5;
+}
+
+/* Định dạng cho các phần tử article */
+article {
+  padding: 0 1em;
+}
+
+/* Định dạng cho các phần tử section */
+section {
+  margin: 1em;
+  padding: 1em;
+}
+
+/* Định dạng cho header, main và footer */
+header, main, footer {
+  margin: 0 auto;
+}
+
+/* Định dạng cho phần header */
+header {
+  padding: 2em;
+  text-align: center;
+  background-image: url('./img/bg.jpg'); /* Hình nền header */
+  background-size: cover;
+  background-position: fixed;
+  color: white;
+}
+
+/* Định dạng cho phần section trong header */
+header section {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+/* Định dạng cho hình ảnh cá nhân */
+header img {
+  border-radius: 50%;
+  max-width: 150px;
+}
+
+/* Định dạng cho tiêu đề h1 và h3, h4 */
+h1 {
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h3, h4 {
+  font-weight: bold;
+}
+
+/* Định dạng cho phần main */
+main {
+  max-width: 1140px;
+}
+
+/* Định dạng cho phần section trong main (trừ phần cuối cùng) */
+main section:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Định dạng cho biểu tượng font-awesome */
+.fab {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Định dạng cho biểu tượng font-awesome màu trắng */
+a .fab {
+  color: white;
+}
+
+/* Định dạng cho phần Work Experience và Skills */
+.course, .skills {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* Định dạng cho phần tiêu đề và mô tả của Work Experience */
+.course .title {
+  color: #509e98;
+  -ms-flex: 0 0 33.3%;
+  flex: 0 0 33.3%;
+  max-width: 33%;
+}
+
+.course .descrition {
+  -ms-flex: 0 0 66.6%;
+  flex: 0 0 66.6%;
+  max-width: 66.6%;
+}
+
+.course .descrition p {
+  padding-left: 1em;
+}
+
+/* Định dạng cho cột trong phần Skills */
+.skills .column {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* Định dạng cho danh sách kỹ năng */
+.skills .column ul, ul.job-description {
+  list-style-type: none;
+}
+
+/* Định dạng cho dấu nhấn trong danh sách kỹ năng */
+.skills .column ul > li:before {
+  content: "►";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
+/* Định dạng cho dấu đánh dấu trong mô tả công việc */
+ul.job-description li:before{
+  content: "✔";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
+/* Định dạng cho phần học vấn và tiêu đề công việc */
+.school, .job-title {
+  text-transform: capitalize;
+}
+
+/* Định dạng cho năm trong học vấn và công việc */
+.school span, .job-title span {
+  color: #889499;
+  text-decoration: underline;
+}
+
+/* Định dạng cho footer */
+footer {
+  padding: 1em 1.5em;
+  background: #A7B8BF;
+  color: white;
+  text-align: right;
+}
+
+/* Media query cho màn hình nhỏ */
+@media only screen and (max-width: 768px) {
+  /* Hiển thị các phần tử .course theo cột */
+  .course {
+    display: block;
+  }
+
+  /* Định dạng các phần tử .course để hiển thị đầy đủ trên màn hình nhỏ */
+  .course .title, .course .descrition {
+    max-width: 100%;
+  }
+}
+
+/* Media query cho màn hình rất nhỏ */
+@media only screen and (max-width: 576px) {
+  /* Hiển thị các phần tử .skills theo cột */
+  .skills {
+    display: block;
+  }
+
+  /* Định dạng các phần tử .column để hiển thị đầy đủ trên màn hình nhỏ */
+  .skills .column {
+    max-width: 100%;
+  }
+
+  /* Định dạng footer để canh giữa nội dung trên màn hình nhỏ */
+  footer {
+    text-align: center;
+  }
+}
